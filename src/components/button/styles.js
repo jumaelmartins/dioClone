@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 export const ButtonContainer = styled.button `
     position: relative;
     width: 100%;
+    max-width: 80%;
     height: 1.5rem;
     padding: .35rem 1.4rem;
     border-radius: 2rem;
@@ -21,11 +22,27 @@ export const ButtonContainer = styled.button `
         background-color: #E4105D;
     }
 
-    ${({variant}) => variant !== "primary" && css`
+    ${({variant}) => variant === "secondary" && css`
         background-color: #E4105D;
+        width: 200;
+        min-width: 80%;
+        height: 37px;
+        font-weight: bold;
 
         &:hover {
             filter: brightness(1.2);
+        }
+    `}
+
+    ${({variant}) => variant === "third" && css`
+        height: 2.3rem;
+        width: 16.0rem;
+        justify-content: center;
+        text-align: center;
+
+        &:hover {
+            filter: brightness(1.2);
+            background-color: #8646AE;
         }
     `}
 `

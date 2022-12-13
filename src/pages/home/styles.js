@@ -27,16 +27,21 @@ export const SectionContainer = styled.div`
     display: flex;
     background-color: black;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 18px;
+    margin: 0;
     h1, p {
         background-color: black;
     }
 `
 export const Title = styled.h1`
     font-size: 48px;
+    padding-left: 10rem;
 `
 export const Paragrafo = styled.p`
-    margin-left: 130px;
+    padding-left: 10rem;
+`
+export const ContainerButtonHomePage = styled.div `
+
+    padding-left: 10rem;
+    padding-right: 20rem;
+
 `

@@ -1,27 +1,37 @@
-import { HomeContainer, ImgContainer, SectionContainer, Title, Paragrafo } from "./styles";
+import { HomeContainer, ImgContainer, SectionContainer, Title, Paragrafo, ContainerButtonHomePage } from "./styles";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button";
 import Nav from "../../components/nav";
 import imagemPrincipal from "./imagemPrincipal.png"
-import { Row } from "../../components/nav/styles";
     const Home = () => {
+
+        const navigate = useNavigate();
+
+        const HandleClickSignin = () => {
+            navigate('/login')
+        }
+
+
         return(<>
             <Nav/>
             <HomeContainer>
                 < SectionContainer> 
                 <Title>{'Desenhe'}
-                    <br></br>
+                    <br/>
                      o seu futuro global 
-                     <br></br>
+                     <br/>
                      agora!</Title>
-                     <br></br>
+                     <br/>
                     <Paragrafo>Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e
-                    <br></br>
+                    <br/>
                          encare seu novo desafio profissional, evoluindo em comunidade com os 
-                         <br></br>
+                         <br/>
                          melhores experts.</Paragrafo>
-                    <Row>
-                        <Button variant="secondary" title='começar agora'/>
-                    </Row>
+                    <ContainerButtonHomePage>
+                        <br/>
+                        <br/>
+                        <Button variant="secondary" title='começar agora' onClick={HandleClickSignin}/>
+                    </ContainerButtonHomePage>
                     
                 </SectionContainer>
                 <ImgContainer>
