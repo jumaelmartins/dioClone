@@ -7,10 +7,13 @@ import { useNavigate } from "react-router-dom";
 const Nav = () =>{
     const navigate = useNavigate();
 
-    const HandleClickSignin = () => {
+    const HandleClickSignin= () => {
         navigate('/login')
     }
 
+    const HandleClickSignUp = () => {
+        navigate('/cadastro')
+    }
     return(
         <Wrapper>
             <NavContainer>
@@ -23,7 +26,7 @@ const Nav = () =>{
                     <Menu href="#">Planos</Menu>
                     <Menu href="#">Para Empresas</Menu>
                     <Button title='entrar' onClick={HandleClickSignin}/>
-                    <Button title='cadastrar'/>
+                    <Button title='cadastrar' onClick={HandleClickSignUp}/>
                 </Row>
             </NavContainer>
         </Wrapper>

@@ -7,10 +7,9 @@ import imagemPrincipal from "./imagemPrincipal.png"
 
         const navigate = useNavigate();
 
-        const HandleClickSignin = () => {
-            navigate('/login')
+        const HandleClickSignUp = () => {
+            navigate('/cadastro')
         }
-
 
         return(<>
             <Nav/>
@@ -30,7 +29,7 @@ import imagemPrincipal from "./imagemPrincipal.png"
                     <ContainerButtonHomePage>
                         <br/>
                         <br/>
-                        <Button variant="secondary" title='começar agora' onClick={HandleClickSignin}/>
+                        <Button variant="secondary" title='começar agora' onClick={HandleClickSignUp}/>
                     </ContainerButtonHomePage>
                     
                 </SectionContainer>
