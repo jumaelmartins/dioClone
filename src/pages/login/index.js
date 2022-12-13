@@ -1,13 +1,22 @@
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
+import { useNavigate } from 'react-router-dom';
 
 import Button from "../../components/button";
 import Input from "../../components/input";
 import Nav from "../../components/nav";
-import { ContainerLogin, FooterLoginContainer, Strip, StripContainer, WrapperLogin } from "./styles";
+import { ContainerLogin, FooterLoginContainer, Strip, StripContainer, WrapperLogin, ContainerL } from "./styles";
+    
     const Login = () => {
+        const navigate = useNavigate();
+
+        const HandleClickSignUp = () => {
+            navigate('/homeUser')
+        }
+
         return(<>
                 <Nav/>
+                <ContainerL>
                     <StripContainer>
                         <Strip></Strip>
                         <Strip></Strip>
@@ -25,15 +34,15 @@ import { ContainerLogin, FooterLoginContainer, Strip, StripContainer, WrapperLog
                             <Input placeholder="E-mail" leftIcon={<MailIcon/>}/>
                             <Input placeholder="Senha" leftIcon={<LockIcon/>}/>
                             <br></br>
-                            <Button title="entrar" variant="third" ></Button>
+                            <Button title="entrar" variant="third" onClick={HandleClickSignUp}></Button>
                             <br></br>
                             <FooterLoginContainer>
                                 <a href="#" style={{color: "yellow"}}>Esqueci minha senha.</a>
-                                <a href="#" style={{color: "green"}}>Criar conta</a>
+                                <a href="/cadastro" style={{color: "green"}}>Criar conta</a>
                             </FooterLoginContainer>
                         </ContainerLogin>
                     </WrapperLogin>
-                    
+                </ContainerL>    
             </>)}
 
 export default Login;

@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.main`
-    background-color: lightgray;
+export const Container = styled.main`
+    background-color:  #1E192C;
+    height: 100vh;
+    width: 100%;
+`
+
+export const HomeContainer = styled.div`
     color: white;
     display: flex;
     width: 100%;
+    max-width: 80;
     margin: 0 auto;
     justify-content: space-between;
     align-items:center;
     height: 70vh;
     background-color: black;
-
-    &::after {
-        content: "";
-        position: absolute;
-    }
 `
 export const ImgContainer = styled.div `
     max-height: 70vh;

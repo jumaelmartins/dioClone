@@ -8,13 +8,14 @@ const GlobalStyle = createGlobalStyle`
         padding:0;
         font-family: sans-serif;
         
+        
     }
 `
 
 export default GlobalStyle;
 
 export const Container = styled.div`
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #1E192C;
     margin: 0;

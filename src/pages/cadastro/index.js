@@ -3,14 +3,15 @@ import LockIcon from '@mui/icons-material/Lock';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import PersonIcon from '@mui/icons-material/Person';
 
+import { ContainerC } from "./styles";
 import Button from "../../components/button";
 import Input from "../../components/input";
 import Nav from "../../components/nav";
 import { BackToLogin, ContainerLogin, FooterLoginContainer, Strip, StripContainer, WrapperLogin, FooterLogin } from "./styles";
-import { height } from '@mui/system';
     const Cadastro = () => {
         return(<>
                 <Nav/>
+                <ContainerC>
                     <StripContainer>
                         <Strip></Strip>
                         <Strip></Strip>
@@ -42,7 +43,7 @@ import { height } from '@mui/system';
                             <FooterLogin><p>Já tenho conta.</p><a href='/login' style={{color:"green"}}>Fazer login.</a></FooterLogin>
                         </ContainerLogin>
                     </WrapperLogin>
-                    
+                </ContainerC>
             </>)}
 
 export default Cadastro;

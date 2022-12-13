@@ -6,7 +6,7 @@ export const StripContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     height: 5rem;
     align-items: flex-end;
-    padding-left: 15.3rem;
+    padding-left: 10.67rem;
 `
 
 export const Strip = styled.div`
@@ -85,4 +85,8 @@ export const FooterLogin = styled.div`
         margin: 3px;
         font-weight: bold;
     }
+`
+export const ContainerC = styled.main`
+    width: 100%;
+    max-width: 80%;
 `
